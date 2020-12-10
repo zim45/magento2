@@ -1,0 +1,10 @@
+version: '2'
+services:
+  webserver:
+    image: wolfsellers/magento2-cloud-local:linux-apache-phpfpm74
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      XDEBUG_CONFIG: remote_host=host.docker.internal
